@@ -1,0 +1,47 @@
+.header{
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+h1{
+    font-size: 260%;
+}
+
+.tile1{
+    background-color: rgb(240, 240, 240);
+    border-style: solid;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+}
+
+.tile2{
+    background-color: rgb(224, 224, 224);
+    border-style: solid;
+}
+
+button{
+    font-size: larger;
+    background-color: white;
+    font-size: x-large;
+}
+
+.output{
+    display: flex;
+    background-color: white;
+    font-size: large; 
+    height: 60%;
+    width: 75%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+}
+
+.calculator{
+    padding: 50px;
+    padding-left: 770px;
+    padding-right: 770px;  
+}
+

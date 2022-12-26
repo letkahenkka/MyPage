@@ -1,0 +1,15 @@
+<div class="header">
+    <h1>Simple calculator</h1>
+</div>
+<div class="calculator">
+    <mat-grid-list cols="4" rowHeight="90px">
+        <mat-grid-tile class="tile1" colspan="4">
+            <div class="output">
+                {{result}}
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile *ngFor="let button of buttons" class="tile2">
+            <button mat-fab (click)="addValue(button)">{{button}}</button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

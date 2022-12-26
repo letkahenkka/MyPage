@@ -1,0 +1,16 @@
+.home-header{
+    padding-top: 200px;
+}
+
+h1{
+    font-size: 4vh;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+p{
+    font-weight: 300;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+}

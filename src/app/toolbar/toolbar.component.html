@@ -1,0 +1,12 @@
+<mat-toolbar>
+    <button mat-icon-button class="menu" [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <span>letkahenkka</span>
+</mat-toolbar>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/home" routerLinkActive="active">Home</button>
+    <button mat-menu-item routerLink="/calculator" routerLinkActive="active">Calculator</button>
+    <button mat-menu-item routerLink="/form" routerLinkActive="active">Form</button>
+</mat-menu>
