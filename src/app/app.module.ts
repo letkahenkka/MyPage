@@ -13,9 +13,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 
 
@@ -35,9 +37,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatGridListModule,
     MatIconModule,
+    MatInputModule,
     MatListModule,
     MatFormFieldModule,
     MatMenuModule,
+    MatSelectModule,
     MatToolbarModule,
     ReactiveFormsModule
   ],

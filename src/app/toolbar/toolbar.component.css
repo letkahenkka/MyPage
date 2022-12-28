@@ -1,8 +1,10 @@
 mat-toolbar{
     background-color: rgb(43, 126, 84);
-    font-size: x-large;
+    font-size: 2rem;
+    color: rgb(48, 48, 48);
+    font-family:monospace;
 }
 
 .spacer{
-    padding-left: 44%;
+    padding-left: 42%;
 }

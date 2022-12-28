@@ -1,0 +1,60 @@
+<div class="header">
+    <h1>Form</h1>
+</div>
+<div class="form">
+    <mat-card>
+        <mat-card-title>Profile information</mat-card-title>
+        <form [formGroup]="profileForm" #formDirective="ngForm" (ngSubmit)="onSubmit(profileForm, formDirective)">
+            <div class="first-row">
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="First name" formControlName="firstName">
+                    <mat-error *ngIf="firstName?.hasError('required')">Enter your first name</mat-error>
+                    <mat-error *ngIf="firstName?.hasError('minlength')">Minimum 3 characters</mat-error>
+                    <mat-error *ngIf="firstName?.hasError('pattern')">Must be a valid name</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="Last name" formControlName="lastName">
+                    <mat-error *ngIf="lastName?.hasError('required')">Enter your last name</mat-error>
+                    <mat-error *ngIf="lastName?.hasError('minlength')">Minimum 3 characters</mat-error>
+                    <mat-error *ngIf="lastName?.hasError('pattern')">Must be a valid name</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="second-row">
+                <mat-form-field appearance="outline">
+                    <input matInput type="email" placeholder="Email" formControlName="email">
+                    <mat-error *ngIf="email?.hasError('required')">Enter your email</mat-error>
+                    <mat-error *ngIf="email?.hasError('pattern')">Must be a valid email</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="Username" formControlName="username">
+                    <mat-error *ngIf="userName?.hasError('required')">Enter your username</mat-error>
+                    <mat-error *ngIf="userName?.hasError('minlength')">Minimum 4 characters</mat-error>
+                    <mat-error *ngIf="userName?.hasError('pattern')">Username cannot contain special
+                        characters</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="third-row">
+                <mat-form-field appearance="outline">
+                    <input matInput type="password" placeholder="Password" formControlName="password">
+                    <mat-error *ngIf="password?.hasError('required')">Enter your password</mat-error>
+                    <mat-error *ngIf="password?.hasError('pattern')">Must contain at least 8 characters:
+                        1 uppercase letter,
+                        1 lowercase letter,
+                        1 number
+                        1 special character</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <input matInput type="password" placeholder="Confirm your password" formControlName="password2"
+                        pattern="{{password?.value}}">
+                    <mat-error *ngIf="password2?.hasError('pattern')">Password doesn't match with original
+                        password</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="fourth-row">
+            <input class="input-checkbox" type="checkbox" formControlName="termsAndConditions">
+            <label for="termsAndConditions">I accept the terms and conditions.</label>
+            </div>
+            <button class="send-button" mat-raised-button type="submit" [disabled]="profileForm.invalid">Send</button>
+        </form>
+    </mat-card>
+</div>
